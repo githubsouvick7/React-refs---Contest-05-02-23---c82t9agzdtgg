@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../styles/App.css';
-
 const App = () => {
 
   //code here 
@@ -25,18 +24,19 @@ const App = () => {
       setPassword('')
     }
 
-    return (
-      <div id="main">
-        Email
-        <input id="inputEmail" type="text" value={email} ref={inputEmailRef} onChange={(e) => setEmail(e.target.value)} /><br />
-        Password
-        <input id="inputPassword" type="text" value={password} ref={inputPasswordRef} onChange={(e) => setPassword(e.target.value)} /><br />
-        <button id="submitButton" onClick={handleSubmit}>Submit</button><br />
-        <p id="emailText">Your Email : {userDetails.email}</p>
-        <p id="passwordText">Your Password : {userDetails.password}</p>
-      </div>
-    )
   }
+  return (
+    <div id="main">
+      Email
+      <input id="inputEmail" type="text" value={email} ref={inputEmailRef} onChange={(e) => setEmail(e.target.value)} /><br />
+      Password
+      <input id="inputPassword" type="text" value={password} ref={inputPasswordRef} onChange={(e) => setPassword(e.target.value)} /><br />
+      <button id="submitButton" onClick={handleSubmit}>Submit</button><br />
+      <p id="emailText">Your Email : {userDetails.email}</p>
+      <p id="passwordText">Your Password : {userDetails.password}</p>
+
+    </div>
+  )
 }
 
 
